@@ -1,8 +1,5 @@
 <div class="po-wrapper">
-  <po-menu 
-    [p-menus]="menus"
-    [p-logo]="logo"
-    >
+  <po-menu *ngIf="menus.length > 0" [p-menus]="menus" p-logo="./assets/logo.png" [p-filter]="true" [p-collapsed]="true">
   </po-menu>
   <router-outlet></router-outlet>
 </div>

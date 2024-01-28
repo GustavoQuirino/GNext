@@ -1,0 +1,27 @@
+<po-page-default 
+    p-title="G NEXT">
+    <po-widget>
+        <h3 style="text-align: center;padding: 1rem; margin-top: .5rem;">
+            Prezado Cliente ,<br>
+            <br>
+            Queremos informar que as atualizações de status dos nossos servidores podem não refletir sempre com precisão o estado operacional real. Isso se deve a fatores como dependência de ferramentas de monitoramento e complexidade nos ambientes tecnológicos. Recomendamos uma análise holística, considerando métricas específicas para uma compreensão mais precisa. Estamos comprometidos em minimizar essas limitações, e nossa equipe de suporte está à disposição para esclarecimentos.
+            <br>
+            Atenciosamente,<br><br>
+            Gustavo Quirino <br>
+        </h3>
+    </po-widget>
+    <po-widget>
+        <po-gauge class="po-xl-6"
+            p-title="Status Servidor"
+            [p-height]="550"
+            [p-value]="valueServer" 
+            [p-description]="statusServer">
+        </po-gauge>
+        <po-gauge class="po-xl-6"
+            p-title="Status Painel"
+            [p-height]="550"
+            [p-value]="valuePannel" 
+            [p-description]="statusPannel">
+        </po-gauge>
+    </po-widget>
+</po-page-default>

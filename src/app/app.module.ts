@@ -7,10 +7,16 @@ import { PoModule } from '@po-ui/ng-components';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { PoTemplatesModule } from '@po-ui/ng-templates';
+import { HomeComponent } from './components/home/home.component';
+import { TutoriaisComponent } from './components/tutoriais/tutoriais.component';
+import { LinksComponent } from './components/links/links.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    TutoriaisComponent,
+    LinksComponent
   ],
   imports: [
     BrowserModule,
