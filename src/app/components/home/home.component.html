@@ -1,45 +1,46 @@
 <po-page-default 
     p-title="G NEXT">
     <po-widget>
-        <h3 style="text-align: center;padding: 1rem; margin-top: .5rem;">
+        <h4 style="text-align: center;padding: 1rem; margin-top: .5rem;">
             Prezado Cliente ,<br>
             <br>
             Queremos informar que as atualizações de status dos nossos servidores podem não refletir sempre com precisão o estado operacional real. Isso se deve a fatores como dependência de ferramentas de monitoramento e complexidade nos ambientes tecnológicos. Recomendamos uma análise holística, considerando métricas específicas para uma compreensão mais precisa. Estamos comprometidos em minimizar essas limitações, e nossa equipe de suporte está à disposição para esclarecimentos.
             <br>
             Atenciosamente,<br><br>
             Gustavo Quirino <br>
-        </h3>
-    </po-widget>
-    <po-widget>
+        </h4>
+    <po-divider></po-divider>
         <div class="po-row">
             <section class="po-md-6">
-                <po-button class="po-offset-xl-4"
+                <po-button style="margin-bottom: 1rem;"
                     (p-click)="verificaServer()"
                     p-icon="po-icon-server"
                     p-label="VERIFICAR STATUS SERVIDOR">
                 </po-button>
-            </section>         
+            </section> 
+            <po-gauge class="po-sm-12" *ngIf="isViewServer" id="gaugeServer"
+                p-title="Status Servidor"
+                [p-ranges]="ranges"
+                [p-height]="450"
+                [p-value]="valueServer">
+            </po-gauge>                
+        </div>
+        <br>
+        <div class="po-row">
             <section class="po-md-6">
-                <po-button class="po-offset-xl-4"
+                <po-button  style="margin-bottom: 1rem;"
                     (p-click)="verificaPannel()"
                     p-icon="po-icon-device-desktop"
                     p-label="VERIFICAR STATUS PAINEL">
                 </po-button>
-            </section>         
-        </div>
-        <br>
-        <po-gauge class="po-xl-6" *ngIf="isViewServer" id="gaugeServer"
-            p-title="Status Servidor"
-            [p-ranges]="ranges"
-            [p-height]="450"
-            [p-value]="valueServer">
-        </po-gauge>
-        <po-gauge class="po-xl-6" *ngIf="isViewPannel" id="gaugePainel"
-            p-title="Status Painel"
-            [p-ranges]="ranges"
-            [p-height]="450"
-            [p-value]="valuePannel">
-        </po-gauge>
+            </section> 
+            <po-gauge class="po-sm-12" *ngIf="isViewPannel" id="gaugePainel"
+                p-title="Status Painel"
+                [p-ranges]="ranges"
+                [p-height]="450"
+                [p-value]="valuePannel">
+            </po-gauge>
+        </div>       
     </po-widget>
 </po-page-default>
 
