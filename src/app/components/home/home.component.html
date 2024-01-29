@@ -11,17 +11,38 @@
         </h3>
     </po-widget>
     <po-widget>
-        <po-gauge class="po-xl-6"
+        <div class="po-row">
+            <section class="po-md-6">
+                <po-button class="po-offset-xl-4"
+                    (p-click)="verificaServer()"
+                    p-icon="po-icon-server"
+                    p-label="VERIFICAR STATUS SERVIDOR">
+                </po-button>
+            </section>         
+            <section class="po-md-6">
+                <po-button class="po-offset-xl-4"
+                    (p-click)="verificaPannel()"
+                    p-icon="po-icon-device-desktop"
+                    p-label="VERIFICAR STATUS PAINEL">
+                </po-button>
+            </section>         
+        </div>
+        <br>
+        <po-gauge class="po-xl-6" *ngIf="isViewServer" id="gaugeServer"
             p-title="Status Servidor"
+            [p-ranges]="ranges"
             [p-height]="450"
-            [p-value]="valueServer" 
-            [p-description]="statusServer">
+            [p-value]="valueServer">
         </po-gauge>
-        <po-gauge class="po-xl-6"
+        <po-gauge class="po-xl-6" *ngIf="isViewPannel" id="gaugePainel"
             p-title="Status Painel"
+            [p-ranges]="ranges"
             [p-height]="450"
-            [p-value]="valuePannel" 
-            [p-description]="statusPannel">
+            [p-value]="valuePannel">
         </po-gauge>
     </po-widget>
 </po-page-default>
+
+<po-loading-overlay *ngIf="isLoading"
+    p-text="Verificando">
+</po-loading-overlay>
