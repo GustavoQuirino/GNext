@@ -35,7 +35,6 @@ export class HomeComponent implements OnInit {
     this.isViewServer = true
     setTimeout(()=>{     
       this.isLoading = false
-      document.getElementById('gaugeServer')?.focus()
     },1500)
   }
 
@@ -44,7 +43,6 @@ export class HomeComponent implements OnInit {
     this.isViewPannel = true
     setTimeout(()=>{    
       this.isLoading = false
-      document.getElementById('gaugePainel')?.focus()
     },1500)
   }
 
