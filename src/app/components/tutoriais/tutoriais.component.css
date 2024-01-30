@@ -1,0 +1,24 @@
+.tutors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section {
+    text-align: center;
+}
+
+.card-video{
+    margin-top: 1rem;
+    width: 850px;
+    height: 400px;
+}
+
+@media(max-width: 855px) {
+    .card-video{
+        width: 400px;
+        height: 190px;
+    }
+}
