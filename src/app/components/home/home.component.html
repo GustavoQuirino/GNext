@@ -24,23 +24,7 @@
                 [p-height]="450"
                 [p-value]="valueServer">
             </po-gauge>                
-        </div>
-        <br>
-        <div class="po-row">
-            <section class="po-md-6">
-                <po-button  style="margin-bottom: 1rem;"
-                    (p-click)="verificaPannel()"
-                    p-icon="po-icon-device-desktop"
-                    p-label="VERIFICAR STATUS PAINEL">
-                </po-button>
-            </section> 
-            <po-gauge class="po-sm-12" *ngIf="isViewPannel" id="gaugePainel"
-                p-title="Status Painel"
-                [p-ranges]="ranges"
-                [p-height]="450"
-                [p-value]="valuePannel">
-            </po-gauge>
-        </div>       
+        </div>    
     </po-widget>
 </po-page-default>
 
