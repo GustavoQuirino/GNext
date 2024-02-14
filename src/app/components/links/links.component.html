@@ -5,8 +5,8 @@
             
             Gostaríamos de informar que alguns links essenciais precisam ser inseridos manualmente em seu navegador de internet para acessar conteúdos importantes. Certifique-se de copiar e colar os links fornecidos abaixo na barra de endereços do seu navegador preferido.</h4><br><br>
         <ul *ngFor="let link of linksApp" >
-            <h3>{{link.label}}</h3>
-            <h4><a>{{link.link}}<a></h4><br>
+            <h4>{{link.label}}</h4>
+            <a>{{link.link}}</a><br>
         </ul>
         <po-divider></po-divider>   
         <h4>Links de aplicativos via Downloader</h4><br>
@@ -14,7 +14,7 @@
         <br>Basta apenas por código dentro do app Downloader e vai baixar qualquer um desses aplicativos.</h4>
         <ul *ngFor="let link of linksDownloader">
             <h4>{{link.label}}</h4>
-            <h2>{{link.codigo}}</h2><br>
+            <h3>{{link.codigo}}</h3><br>
         </ul>
     </po-widget>
 </po-page-default>
