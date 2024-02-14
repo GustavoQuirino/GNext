@@ -18,7 +18,9 @@ section {
 
 @media(max-width: 855px) {
     .card-video{
-        width: 400px;
+        width: 380px;
         height: 190px;
     }
 }
+
+

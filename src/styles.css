@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+.po-container, .po-page-content, .po-menu-inner, .po-menu-header-container-logo{
+    background-image: linear-gradient(45deg, rgb(0, 0, 150), orange) !important;
+}
+
+.po-button{
+    color: #fff !important;
+    border: 2px solid #fff !important;
+}
+
+h4, h3 , h2, a, .po-fonts-icon, .po-label, .po-menu-icon-label{
+    color: #ffffffc2;
+}
+
+h1{
+    color: rgb(0, 0, 150) !important;
+}
+
+.po-menu-item{
+    background-color: transparent !important;
+}
+
+.po-menu-filter-container{
+    background-image: linear-gradient(-12deg, rgb(253, 175, 28), rgb(23, 23, 252));
+}
+
+
+
