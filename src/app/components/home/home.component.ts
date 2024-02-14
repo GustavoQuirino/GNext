@@ -9,12 +9,10 @@ import { PoGaugeRanges } from '@po-ui/ng-components';
 
 export class HomeComponent implements OnInit {
   valueServer: number = 100
-  valuePannel: number = 100
   statusServer: string = 'Operacional'
-  statusPannel: string = 'Operacional'
+
 
   isViewServer: boolean = false
-  isViewPannel: boolean = false
   isLoading: boolean = false
 
   ranges: PoGaugeRanges[] = [
@@ -27,21 +25,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.isViewServer = false
-    this.isViewPannel = false
   }
 
   verificaServer(){
     this.isLoading = true
     this.isViewServer = true
     setTimeout(()=>{     
-      this.isLoading = false
-    },1500)
-  }
-
-  verificaPannel(){
-    this.isLoading = true
-    this.isViewPannel = true
-    setTimeout(()=>{    
       this.isLoading = false
     },1500)
   }
