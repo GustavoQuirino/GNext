@@ -14,6 +14,7 @@ section {
     margin-top: 1rem;
     width: 850px;
     height: 400px;
+    box-shadow: 15px 10px 15px #fff;
 }
 
 @media(max-width: 855px) {
