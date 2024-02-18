@@ -4,18 +4,11 @@
             <h2>Aqui estão alguns vídeos para auxiliar na instalação e configuração de alguns aplicativos utilizados.</h2>
         </po-container>
         <br>
-        <div class="tutors">         
-            <section>
-                <po-label p-label="Instalar SmartOne Samsung Antiga"></po-label>
-                <iframe class="card-video"
-                    src="https://www.youtube.com/embed/s4qrovcgRyQ" 
-                    allow="accelerometer; gyroscope; web-share" allowfullscreen>
-                </iframe>
-            </section>
-            <section>
-                <po-label p-label="Instalar Aplicativo Downloader FireStick"></po-label>
-                <iframe class="card-video"
-                    src="https://www.youtube.com/embed/DPnAeayun-w" 
+        <div class="tutors" *ngFor="let video of videos">         
+            <section >
+                <po-label p-label={{video.title}}></po-label>
+                <iframe class="card-video" 
+                    [src]="getSafeUrl(video.url)"
                     allow="accelerometer; gyroscope; web-share" allowfullscreen>
                 </iframe>
             </section>
