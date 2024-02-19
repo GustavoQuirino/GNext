@@ -8,7 +8,7 @@ import { PoGaugeRanges } from '@po-ui/ng-components';
 })
 
 export class HomeComponent implements OnInit {
-  valueServer: number = 50
+  valueServer: number = 99
   statusServer: string = 'Operacional'
 
 
